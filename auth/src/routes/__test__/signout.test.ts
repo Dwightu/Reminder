@@ -12,7 +12,7 @@ it('returns a 201 on successful signing out', async () => {
         .expect(201);
 
     await request(app)
-        .get('/api/users/signout')
+        .post('/api/users/signout')
         .send({
             email: 'test@test.com',
             password: 'password'
